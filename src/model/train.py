@@ -25,7 +25,7 @@ model = RandomForestClassifier()
 model.fit(X_train, y_train)
 
 # Log model and evaluation metrics to W&B
-with wandb.init(project="PracticaMLOps", name="RandomForest", id=args.IdExecution):
+with wandb.init(project="Practica-MLOps", name="RandomForest", id=args.IdExecution):
     # Log model
     wandb.sklearn.plot_classifier(model, X_train, X_test, y_train, y_test, model_name="RandomForest")
 
